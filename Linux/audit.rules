@@ -1,0 +1,7 @@
+# 'auditd' to set rules for /etc/shadow, /etc/passwd, and /var/log/auth.log
+
+```bash
+-w /etc/shadow -p wra -k hashpass_audit
+-w /etc/passwd -p wra -k userpass_audit
+-w /var/log/auth.log -p wra -k authlog_audit
+```
