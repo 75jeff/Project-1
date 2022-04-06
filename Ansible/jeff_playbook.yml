@@ -1,0 +1,8 @@
+---
+ - hosts: webservers
+    become: true
+    tasks:
+     - name: install apache httpd
+       apt:
+          name: apache2
+          state: absent 
