@@ -1,7 +1,7 @@
 Clicking the sample web log data to Kibana web site.
 
 
-![images](images/Sample data.png?raw=true)
+![images](images/Sample data.png)
 
 
 
