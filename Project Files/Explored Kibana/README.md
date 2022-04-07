@@ -3,7 +3,9 @@ Clicking the sample web log data to Kibana web site.
 
 ![images](https://github.com/75jeff/Project-1/blob/c51effe9941e0a3913df324ac7780469ac2d67da/images/Sample%20data.png)
 
+Then at Dashboard page.
 
+![images](https://github.com/75jeff/Project-1/blob/b8e0071665540705f7d759417aef10e36b87cc73/images/Dashboard.png)
 
 Questions and its answers:
 
