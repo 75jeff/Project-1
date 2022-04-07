@@ -1,7 +1,7 @@
 Clicking the sample web log data to Kibana web site.
 
 
-![images](images/Sample data.png)
+![images](https://github.com/75jeff/Project-1/blob/c51effe9941e0a3913df324ac7780469ac2d67da/images/Sample%20data.png)
 
 
 
