@@ -1,5 +1,7 @@
 Clicking the sample web log data to Kibana web site.
 
+![images](images/Sample data.png?raw=true)
+
 Questions and its answers:
 
 1. In the last 7 days, how many unique visitors were located in India?
