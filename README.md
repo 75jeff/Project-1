@@ -63,7 +63,7 @@ This document contains the following details:
 - How to Use the Ansible Build
 
 ### Description of the Topology
-The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application. Load balancing ensures that the application will be highly availability, in addition to restricting traffic to the network. Load Balancer secures the availability aspect of security. By evenly distribute network traffic to prevent failure caused by overloading a particular resource. It defends against distributed denial of service (DDoS) attacks by shifting attack traffic from the corporate server to a public cloud provider. Jump box advantage is easy to secure and monitor traffic on this single node. Since all network traffic forces through only jump box. Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file and system logs. Filebeat monitors the log files, collects log events, and forward it either to Elasticsearch or Logtash for indexing. And metricbeats collecting server’s metrics and statistics and send to specified output either Elasticsearch or Logtash. 
+The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application. Load balancing ensures that the application will have high availability, in addition to restricting traffic to the network. Load Balancer secures the availability aspect of security, prevents failure caused by overloading a particular resource through even distribution of network traffic. Further, by shifting attack traffic from the corporate server to a public cloud provider it will deflect distributed denial of service (DDoS) attacks. The advantage of jump box is easy securement and monitoring of traffic because it forces all network traffic  through only a single node. An ELK server is included because it allows users to monitor the vulnerable VMs for changes to the file and system logs. Within the ELK server there are installed beats tools like Filebeat, to monitor log files, collect log events, and send them either to Elasticsearch or Logtash for indexing; while metricbeats collect server’s metrics and statistics and send those outputs to either Elasticsearch or Logtash as well. 
 
 The configuration details of each machine may be found below.
 
@@ -80,7 +80,7 @@ The machines on the internal network are not exposed to the public Internet. Onl
 	- 99.253.224.70 
 
 Machines within the network can only be accessed by local host computer.
-While machines who can access ELK VM are local host computer with external IP address 99.253.224.70, and Ansible machine through ssh, with IP address 10.1.0.4. 
+The machines, that can access ELK VM, are host computer with external IP address 99.253.224.70, and Ansible machine through ssh, with IP address 10.1.0.4. 
 
 A summary of the access policies in place can be found in the table below.
 
@@ -94,7 +94,7 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
  
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because It is more productive it saves time, eliminates  repetitive tasks, leads to less mistakes/errors, and increases accountability and compliance.
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it leads to more productivity, saving time, eliminating repetitive tasks, leading to less errors, and increasing accountability and compliance.
 
 The playbook implements the following tasks:
 - install docker and python3 engine  
@@ -116,21 +116,17 @@ We have installed the following Beats on these machines:
 - metricbeat-7.6.1-amd64.deb
 
 These Beats allow us to collect the following information from each machine:
-(- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._)
-Filebeat collecting Log files (also known as machine data) are important data points for security and surveillance, providing a full history of events over time.
-
-Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash. Metricbeat helps you monitor your servers by collecting metrics from the system and services running on the server, such as: Apache. HAProxy.
-ou get system-level CPU usage, memory, file system, disk IO, and network IO statistics, as well as top-like statistics for every process running on your systems
+Filebeat is collecting Log files/machine data, that we use for security and surveillance, tracking a full history of events over time.
+Metricbeat takes the metrics and statistics, which we use to monitor the web servers' health (CPU usage, memory, file system, disk, and network).
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 SSH into the control node and follow the steps below:
 - Copy the YAML playbook file to /etc/ansible directory.
-- Update the ansible host file to include the private IP address of the VMs where the docker be installed.
-- Run the playbook, and navigate to docker web machines to check that the installation worked as expected.
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+- Update the ansible host file to include private IP address with ansible python interpreter next to it (webserver group and elk group).
+- Edit the ansible configuration's remote_user with admin username for ssh connections. 
+- Run the playbook, and navigate to docker web machines to check that the installation worked by ssh or curl command.
+- To verify the elk installation open the web page and navigate to http://<ELK_VM_EXTERNAL_IP>:5601/app/kibana
+
+
 
