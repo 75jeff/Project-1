@@ -57,6 +57,8 @@ AT chart Unique Visitors Vs. Average Bytes:
 
 10. Switch to the Kibana Discover page to see more details about this activity.
 
+![images](https://github.com/75jeff/Project-1/blob/6c475011c9a95c3ed21b9608b261ad3cd12d2fba/images/Discover.png)
+
     a. What is the source IP address of this activity? 
       - 132.186.182.124
       
