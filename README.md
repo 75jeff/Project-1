@@ -53,10 +53,11 @@ The configuration details of each machine may be found below.
 
 ### Access Policies
 The machines on the internal network are not exposed to the public Internet. Only the elk-VM machine and the load balancer can accept connections from the Internet. Access to these machine is only allowed from the following IP addresses:
-	- 99.253.224.70 
+- 99.253.224.70
 
-Machines within the network can only be accessed by local host computer.
-The machines, that can access ELK VM, are host computer with external IP address 99.253.224.70, and Ansible machine through ssh, with IP address 10.1.0.4. 
+Machines within the network can only be accessed by local host computer. The machines, that can access ELK VM are:
+- host computer with external IP address 99.253.224.70 
+- Ansible machine through ssh, with IP address 10.1.0.4 
 
 A summary of the access policies in place can be found in the table below.
 
